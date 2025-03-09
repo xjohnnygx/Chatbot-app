@@ -1,0 +1,29 @@
+# Virtual Environment
+virtual_environment/
+venv/
+*.pyc
+__pycache__/
+
+# Environment Variables
+.env
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+
+# Docker
+# *.dockerignore
+# docker-compose.yml
+
+# Byte-compiled
+*.pyo
+*.pyc
+*.pyd

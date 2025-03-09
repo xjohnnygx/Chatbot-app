@@ -1,0 +1,11 @@
+services:
+  chatbot-app:
+    build:
+      context: .  # Build from current directory
+      dockerfile: Dockerfile
+    container_name: chatbot-app
+    ports:
+      - "8000:8000"  # Map host port 8000 to container port 8000
+    env_file:
+      - .env        # Load environment variables
+    restart: always # Restart on failure
