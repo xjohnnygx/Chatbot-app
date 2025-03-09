@@ -22,6 +22,15 @@ To use this application, you must:
 - **Generate an API key** at [OpenAI API Keys](https://platform.openai.com/settings/organization/api-keys).
 - **Add credits to your OpenAI account** at [OpenAI Billing](https://platform.openai.com/settings/organization/billing/overview).
 
+### 🔹 Environment Variables Setup
+You need to create a **`.env`** file in the project root and add your OpenAI API key like this:
+
+#### 📄 `.env` File Example:
+```
+API_KEY=your_openai_api_key_here
+```
+You can refer to the **`.env.sample`** file in the project for guidance.
+
 ### 🔹 Running with Docker
 Ensure you have:
 - **Docker Engine** installed ([Download Here](https://docs.docker.com/get-docker/))
@@ -44,23 +53,29 @@ git clone https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME.git
 cd YOUR_REPO_NAME
 ```
 
-2️⃣ **Build the Docker Image**
+2️⃣ **Create the `.env` file and add your API Key**
+```bash
+cp .env.sample .env
+nano .env  # Add your OpenAI API key inside
+```
+
+3️⃣ **Build the Docker Image**
 ```bash
 docker compose build
 ```
 
-3️⃣ **Run the Container**
+4️⃣ **Run the Container**
 ```bash
 docker compose up -d
 ```
 
-4️⃣ **Access the Application**
+5️⃣ **Access the Application**
 Open your browser and go to:
 ```
 http://localhost:8000
 ```
 
-5️⃣ **Stopping the Container**
+6️⃣ **Stopping the Container**
 ```bash
 docker compose down
 ```
@@ -86,18 +101,23 @@ source venv/bin/activate  # On Windows use: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-4️⃣ **Run the Application**
+4️⃣ **Create the `.env` file and add your API Key**
 ```bash
-python main.py
+cp .env.sample .env
+nano .env  # Add your OpenAI API key inside
 ```
 
-5️⃣ **Access the Application**
+5️⃣ **Run the Application**
+```bash
+python main.py # for windows
+python3 main.py # for linux/macOS
+```
+
+6️⃣ **Access the Application**
 Open your browser and go to:
 ```
 http://localhost:8000
 ```
-
----
 
 ## 📸 Application Preview
 
@@ -129,4 +149,4 @@ If you like this project, please give it a **star ⭐** on GitHub!
 
 ---
 
-Happy coding bra! 🤙
+Happy coding! 🚀
