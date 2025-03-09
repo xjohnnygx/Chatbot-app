@@ -6,7 +6,7 @@ chatForm.addEventListener("submit", async function(event: SubmitEvent) {
     try {
         event.preventDefault();
         const message = inputField.value;
-        chatBox.innerHTML += `<div class="text-end"><b>You</b> ${message}</div><br>`;
+        chatBox.innerHTML += `<div class="user-message">${message}</div>`;
         const response = await fetch(`${window.location.origin}/chat`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -14,7 +14,7 @@ chatForm.addEventListener("submit", async function(event: SubmitEvent) {
         });
         const data = await response.json();
         if (response.status === 200) {
-            chatBox.innerHTML += `<div class="text-start"><b>Bot</b> ${data.response}</div><br>`;
+            chatBox.innerHTML += `<div class="bot-message">${data.response}</div>`;
         } else {
             console.error(data);
             alert(data["error"]["code"]);

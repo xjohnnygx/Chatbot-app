@@ -46,7 +46,7 @@ chatForm.addEventListener("submit", function (event) {
                     _a.trys.push([0, 3, , 4]);
                     event.preventDefault();
                     message = inputField.value;
-                    chatBox.innerHTML += "<div class=\"text-end\"><b>You</b> ".concat(message, "</div><br>");
+                    chatBox.innerHTML += "<div class=\"user-message\">".concat(message, "</div>");
                     return [4 /*yield*/, fetch("".concat(window.location.origin, "/chat"), {
                             method: "POST",
                             headers: { "Content-Type": "application/json" },
@@ -58,7 +58,7 @@ chatForm.addEventListener("submit", function (event) {
                 case 2:
                     data = _a.sent();
                     if (response.status === 200) {
-                        chatBox.innerHTML += "<div class=\"text-start\"><b>Bot</b> ".concat(data.response, "</div><br>");
+                        chatBox.innerHTML += "<div class=\"bot-message\">".concat(data.response, "</div>");
                     }
                     else {
                         console.error(data);
