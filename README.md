@@ -49,7 +49,7 @@ Ensure you have:
 
 1️⃣ **Clone the Repository**
 ```bash
-git clone https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME.git
+git clone https://github.com/xjohnnygx/Chatbot-app.git
 cd YOUR_REPO_NAME
 ```
 
@@ -86,7 +86,7 @@ docker compose down
 
 1️⃣ **Clone the Repository**
 ```bash
-git clone https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME.git
+git clone https://github.com/xjohnnygx/Chatbot-app.git
 cd YOUR_REPO_NAME
 ```
 
