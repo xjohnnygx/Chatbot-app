@@ -50,7 +50,7 @@ Ensure you have:
 1️⃣ **Clone the Repository**
 ```bash
 git clone https://github.com/xjohnnygx/Chatbot-app.git
-cd YOUR_REPO_NAME
+cd REPO_NAME
 ```
 
 2️⃣ **Create the `.env` file and add your API Key**
@@ -87,7 +87,7 @@ docker compose down
 1️⃣ **Clone the Repository**
 ```bash
 git clone https://github.com/xjohnnygx/Chatbot-app.git
-cd YOUR_REPO_NAME
+cd REPO_NAME
 ```
 
 2️⃣ **Create a Virtual Environment**
