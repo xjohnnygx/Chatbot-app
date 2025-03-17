@@ -37,16 +37,21 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 var chatBox = document.querySelector("#chat-box");
 var chatForm = document.querySelector("#chat-form");
 var inputField = document.querySelector("#input-field");
+var colors = ["#007bff", "#dc3545", "#00f038", "#9f0eff", "#eeff00"];
+function getRandomColor() {
+    return colors[Math.floor(Math.random() * colors.length)];
+}
 chatForm.addEventListener("submit", function (event) {
     return __awaiter(this, void 0, void 0, function () {
-        var message, response, data, error_1;
+        var message, userColor, response, data, botColor, error_1;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
                     _a.trys.push([0, 3, , 4]);
                     event.preventDefault();
                     message = inputField.value;
-                    chatBox.innerHTML += "<div class=\"user-message\">".concat(message, "</div>");
+                    userColor = getRandomColor();
+                    chatBox.innerHTML += "<div class=\"message user-message\" style=\"background-color: ".concat(userColor, ";\n        color: ").concat(userColor == "#00f038" || userColor === "#eeff00" ? "black" : "white", ";\">").concat(message, "</div>");
                     return [4 /*yield*/, fetch("".concat(window.location.origin, "/chat"), {
                             method: "POST",
                             headers: { "Content-Type": "application/json" },
@@ -58,7 +63,8 @@ chatForm.addEventListener("submit", function (event) {
                 case 2:
                     data = _a.sent();
                     if (response.status === 200) {
-                        chatBox.innerHTML += "<div class=\"bot-message\">".concat(data.response, "</div>");
+                        botColor = getRandomColor();
+                        chatBox.innerHTML += "<div class=\"message bot-message\" style=\"background-color: ".concat(botColor, ";\n            color: ").concat(botColor == "#00f038" || botColor === "#eeff00" ? "black" : "white", ";\">").concat(data.response, "</div>");
                     }
                     else {
                         console.error(data);
