@@ -41,7 +41,6 @@ async def chat( request: Request ) -> Response:
             headers={"Content-Type": "application/json"}
         )
     except Exception as error:
-        print("here")
         return Response(
             content=json.dumps({"error": str(error)}),
             status_code=500,
